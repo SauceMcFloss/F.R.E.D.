@@ -6,6 +6,8 @@ Populate each section with information as it applies to your project. If a secti
 [Major Classes Document](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/MajorClasses.md)
 # Data Design
 
+* Since each driving 'session' does not require any prior information, data persistance is not really applicable. The only type of data persistance we plan on doing is recording the debug console as a text or json file written to the disc before application close.
+
 # Business Rules
 Business rules will likely not apply to this particular project because we are not creating a commodity that will be marketed, nor are we creating a business to market such an item.
 # User Interface Design
