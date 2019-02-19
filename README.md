@@ -25,5 +25,5 @@ Each item should link to the actual product, be it a google spreadsheet, google 
 * [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
 * [Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/src/Tests/UI/manualUI)
 * Product Demonstration
- -[Images](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
- -[Videos](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Youtube_Video_Demos)
+  - [Images](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
+  - [Videos](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Youtube_Video_Demos)
