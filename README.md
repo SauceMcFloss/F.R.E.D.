@@ -1,7 +1,7 @@
 # Group Twelve Project for COP 4331 - F.R.E.D.- Spring 2019
 F.R.E.D The Semi-Autonomous RC Car
 
-## Team Members (Add your name here!)
+## Team Members
 - Devin Draizin
 - Cameron Mortus
 - Hylton Williamson
