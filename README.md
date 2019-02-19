@@ -22,7 +22,6 @@ Each item should link to the actual product, be it a google spreadsheet, google 
   - [System Architecture](https://github.com/COP4331Group12/F.R.E.D./blob/master/System_Architecture.md)
   - [Class Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Class_Diagram.jpg)
   - [Sequence Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Sequence_Diagram.jpg)
-  - etc.
-* Source Code
+* [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
 * Test Cases
 * [Product Demonstration](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
