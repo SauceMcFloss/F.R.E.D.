@@ -50,11 +50,8 @@ Because the RC car has multiple parts that need to run in real time, we will nee
     * Any faults detected that directly affect the operation of the car will result in a 'stop' method to be called to halt the car from performing any further action. We will log any errors to the debug console and attempt to recalibrate, then start again on user command.
 
 # Architectural Feasibility
-* Technical Feasibility - While this project does have many parts, 
-* Legal Feasibility -
-* Economic Feasibility - 
-* Scheduling Feasibility - 
-
+While certainly not an easy task, the development of a autonomous, neural network-driven RC car is not a new endeavor. Because we have been able to procure our hardware quickly, and because we have access to an RC car already as well as examples of other people successfully building neural networks we have deemed this particular project feasible.
+ 
 # Overengineering
 * build with a margin of safety for the cars capabilites 
   * car will be capable of going faster than we will ever set it to do
