@@ -21,7 +21,7 @@ Not many security features need to be implemented. However, we will have a usern
 Because the RC car has multiple parts that need to run in real time, we will need our systems to be fast enough to compute in real time as well. Specifically, we want the refresh rate for our camera to be at least 30 frames per second, and we want our neural network to be able to recognize signals quickly enough to respond to them before passing them completely.
 
 # Scalability
-* capability for multiple car profiles
+* Capability for multiple car profiles
 * Neural Network expandable through training
 
 # Interoperability
@@ -40,6 +40,10 @@ Because the RC car has multiple parts that need to run in real time, we will nee
 # Fault Tolerance
 
 # Architectural Feasibility
+* Technical Feasibility - While this project does have many parts, 
+* Legal Feasibility -
+* Economic Feasibility - 
+* Scheduling Feasibility - 
 
 # Overengineering
 * build with a margin of safety for the cars capabilites 
