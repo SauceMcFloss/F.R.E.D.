@@ -4,7 +4,7 @@ F.R.E.D The Semi-Autonomous RC Car
 ## Team Members (Add your name here!)
 - Devin Draizin
 - Cameron
-- Hylton 
+- Hylton Williamson
 - Kyle Wu
 
 ## Vision Statement
