@@ -33,7 +33,9 @@ Populate each section with information as it applies to your project. If a secti
 # Overengineering
 
 # Build-vs-Buy Decisions
-
+* Buy Arduino with wifi capablities ($40)
+* Use a R.C. we have access to
+* Use a Android phone we have access too
 # Reuse
 
 # Change Strategy
