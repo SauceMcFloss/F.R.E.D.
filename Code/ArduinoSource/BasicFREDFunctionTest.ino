@@ -1,37 +1,52 @@
 #include <Servo.h>
 
 int throttlePin = 9;
-int throttleValue  = 0;
-Servo throttleServo;
 int steeringPin = 10;
+
+int throttleValue  = 0;
 int steeringValue  = 0;
+
+Servo throttleServo;
 Servo steeringServo;
+
+int throttleReverse = 1200;
+int throttleCenter = 1500;
+int throttleForward = 1800;
+int throttleCurrent = throttleCenter;
+
+int steeringLeft = 30;
+int steeringCenter = 90;
+int steeringRight = 180;
+int steeringCurrent = steeringCenter;
+
+int delayFive = 5000;
+int delayOne = 1000;
 
 void setup() {
   // put your setup code here, to run once:
   throttleServo.attach(throttlePin);
   steeringServo.attach(steeringPin);
-  throttleServo.writeMicroseconds(1500);
-  steeringServo.write(90);
-  delayMicroseconds(5000);
+  throttleServo.writeMicroseconds(throttleCurrent);
+  steeringServo.write(steeringCurrent);
+  delayMicroseconds(delayFive);
 }
 
 void loop() {
-  throttleServo.writeMicroseconds(1200);//clockwise
-  delay(1000);
-  throttleServo.writeMicroseconds(1500);//center
-  delay(1000);
-  throttleServo.writeMicroseconds(1800);//counter clockwise
-  delay(1000);
-  throttleServo.writeMicroseconds(1500);
-  delay(1000);
+  throttleServo.writeMicroseconds(throttleReverse);//Reverse
+  delay(delayOne);
+  throttleServo.writeMicroseconds(throttleCenter);//center
+  delay(delayOne);
+  throttleServo.writeMicroseconds(throttleForward);//Forward
+  delay(delayOne);
+  throttleServo.writeMicroseconds(throttleCenter);
+  delay(delayOne);
   
-  steeringServo.write(30);//left
-  delay(1000);
-  steeringServo.write(90);
-  delay(1000);
-  steeringServo.write(160);//right
-  delay(1000);
-  steeringServo.write(90);
-  delay(1000);
+  steeringServo.write(steeringLeft);//left
+  delay(delayOne);
+  steeringServo.write(steeringCenter);
+  delay(delayOne);
+  steeringServo.write(steeringRight);//right
+  delay(delayOne);
+  steeringServo.write(steeringCenter);
+  delay(delayOne);
 }
