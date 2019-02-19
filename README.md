@@ -21,7 +21,7 @@ Each item should link to the actual product, be it a google spreadsheet, google 
 * Design Documents
   - System Architecture
   - Class Diagrams
-  - Sequence Diagrams
+  - [Sequence Diagrams](https://drive.google.com/file/d/1R6-OD48bRQYWJXMrsEg1WMuopRXIDft5/view?usp=sharing)
   - etc.
 * Source Code
 * Test Cases
