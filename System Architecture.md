@@ -17,13 +17,17 @@ Populate each section with information as it applies to your project. If a secti
 # Performance
 
 # Scalability
+* capability for multiple car profiles
+* Neural Network expandable through training
 
 # Interoperability
+* Arduino to PC - Wifi
+* camera to PC - Wifi -> URL
 
 # Internationalization/Localization
-
-# Input/Output
-
+* Input
+  * camera
+  * user inputs through buttons on the UI
 # Error Processing
 * We will use a combination of exceptions and assertions.
 * If an issue exists with inputs for car functions, program will stop the car.
@@ -34,11 +38,19 @@ Populate each section with information as it applies to your project. If a secti
 # Architectural Feasibility
 
 # Overengineering
+* build with a margin of safety for the cars capabilites 
+  * car will be capable of going faster than we will ever set it to do
 
 # Build-vs-Buy Decisions
 * Buy Arduino with wifi capablities ($40)
 * Use a R.C. we have access to
 * Use a Android phone we have access too
+
 # Reuse
 
 # Change Strategy
+* If change is easily implementable then 
+  * build unit tests
+  * build code
+  * unit test
+  * regression testing
