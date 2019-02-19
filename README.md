@@ -24,4 +24,6 @@ Each item should link to the actual product, be it a google spreadsheet, google 
   - [Sequence Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Sequence_Diagram.jpg)
 * [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
 * [Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/src/Tests/UI/manualUI)
-* [Product Demonstration](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
+* [Product Demonstration]
+ -[Images](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
+ -[Videos](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Youtube_Video_Demos)
