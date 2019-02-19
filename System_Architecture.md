@@ -7,7 +7,7 @@ Populate each section with information as it applies to your project. If a secti
 # Data Design
 
 # Business Rules
-
+Business rules will likely not apply to this particular project because we are not creating a commodity that will be marketed, nor are we creating a business to market such an item.
 # User Interface Design
 
 # Resource Management
