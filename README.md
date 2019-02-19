@@ -25,4 +25,4 @@ Each item should link to the actual product, be it a google spreadsheet, google 
   - etc.
 * Source Code
 * Test Cases
-* Product Demonstration
+* [Product Demonstration](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
