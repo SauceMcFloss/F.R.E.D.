@@ -3,7 +3,7 @@
 Populate each section with information as it applies to your project. If a section does not apply, explain why. Include diagrams (or links to diagrams) in each section, as appropriate. For example, sketches of the user interfaces along with an explanation of how the interface components will work; ERD diagrams of the database; rough class diagrams; context diagrams showing the system boundary; etc.
 
 # Major Classes
-[Major Classes Document](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/MajorClasses.md)
+[A list of the major classes are located here.](https://github.com/COP4331Group12/F.R.E.D./blob/master/MajorClasses.md)
 # Data Design
 
 # Business Rules
@@ -15,6 +15,7 @@ Our priority for this sprint is obtaining all the hardware required for the proj
 
 We will meet every Tuesday and Thursday for two hours between 4 PM to 6 PM in order to ensure people are obtaining the hardware they are assigned to get as well as the classes they are supposed to design.
 # Security
+Because we are only producing one prototype, security features likely won't be necessary for this project. However, in the event that we do want to produce this program for other RC Cars to run on, we will likely need to implement some measure of security so that the RC car cannot be intercepted and controlled by another signal.
 
 # Performance
 
