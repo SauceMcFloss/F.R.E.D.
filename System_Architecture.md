@@ -15,7 +15,7 @@ Our priority for this sprint is obtaining all the hardware required for the proj
 
 We will meet every Tuesday and Thursday for two hours between 4 PM to 6 PM in order to ensure people are obtaining the hardware they are assigned to get as well as the classes they are supposed to design.
 # Security
-Because we are only producing one prototype, security features likely won't be necessary for this project. However, in the event that we do want to produce this program for other RC Cars to run on, we will likely need to implement some measure of security so that the RC car cannot be intercepted and controlled by another signal.
+Not many secruity features need to be implemented. However, we will have a username and password for the webcam feed to the computer and in the event that we do want to produce this program for other RC Cars to run on, we will likely need to implement some measure of security so that the RC car cannot be intercepted and controlled by another signal.
 
 # Performance
 
