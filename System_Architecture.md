@@ -11,7 +11,9 @@ Business rules will likely not apply to this particular project because we are n
 # User Interface Design
 
 # Resource Management
+Our priority for this sprint is obtaining all the hardware required for the project (rc car, arduino, cameras) as well as setting up the classes and the github for shared working purposes. Because we are only working on one project, formal resource management is less important than it ordinarily would be if we had multiple projects.
 
+We will meet every Tuesday and Thursday for two hours between 4 PM to 6 PM in order to ensure people are obtaining the hardware they are assigned to get as well as the classes they are supposed to design.
 # Security
 
 # Performance
