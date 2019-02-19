@@ -38,6 +38,16 @@ Because the RC car has multiple parts that need to run in real time, we will nee
 * If issue will cause crash or major problem on the computer side, program stop the car before exiting.
 * minor issues will be handled on a case by case basis
 # Fault Tolerance
+* We adopted a very strict error resolution policy for this project, completely stopping the  car in order to recalibrate any errors. Our specific fault tolerances are listed below.
+
+* User Interface
+    * Any user interface errors that are caught will not close the user interface application. Instead we will log any errors into the debug console.
+
+* Camera
+    * If we recieve corrupted or invalid camera data we will adopt the "Last valid" resolution policy. That is taking the last valid frame until we recieve a valid frame to show in the feed.
+
+* Arduino
+    * Any faults detected that directly affect the operation of the car will result in a 'stop' method to be called to halt the car from performing any further action. We will log any errors to the debug console and attempt to recalibrate, then start again on user command.
 
 # Architectural Feasibility
 * Technical Feasibility - While this project does have many parts, 
