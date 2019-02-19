@@ -21,4 +21,4 @@
 |            028 |           006 | There will be a UI component for displaying a connection status to the car | Unverified |
 |            019 |           007 | There will be a method of detecting 'lanes' through the camera in the form of sheets of white printer paper | Unverified |
 |            020 |           007 | There will be a method to keep the car driving in between the lanes during the whole course| Unverified |
-|            021 |           008 | There will be a method for every driving function to be issued through the radio controller| Unverified |
+|            021 |           008 | There will be a method for every driving function to be issued through an arduino| Unverified |
