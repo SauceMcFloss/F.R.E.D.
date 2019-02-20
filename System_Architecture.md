@@ -64,6 +64,7 @@ While certainly not an easy task, the development of a autonomous, neural networ
 * Use a Android phone we have access to
 
 # Reuse
+While this project is our first Agile project and we therefore don't have user stories or previous requirements to use from other projects, we will be creating utility classes that can be shared between different packages with similarities, (such as the driving between autonomous and manual driving).
 
 # Change Strategy
 * If change is easily implementable then 
