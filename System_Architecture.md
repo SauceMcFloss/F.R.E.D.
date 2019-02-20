@@ -43,7 +43,7 @@ Because the RC car has multiple parts that need to run in real time, we will nee
 * We adopted a very strict error resolution policy for this project, completely stopping the  car in order to recalibrate any errors. Our specific fault tolerances are listed below.
 
 * User Interface
-    * Any user interface errors that are caught will not close the user interface application. Instead we will log any errors into the debug console.
+    * Any user interface errors that are caught will not close the user interface application. Instead we will log any errors into the debug console.[Link](https://github.com/COP4331Group12/F.R.E.D./tree/master/Markdown/UI_Design_Sketch)
 
 * Camera
     * If we recieve corrupted or invalid camera data we will adopt the "Last valid" resolution policy. That is taking the last valid frame until we recieve a valid frame to show in the feed.
