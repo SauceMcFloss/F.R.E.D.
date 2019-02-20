@@ -11,7 +11,7 @@ Populate each section with information as it applies to your project. If a secti
 # Business Rules
 Business rules will likely not apply to this particular project because we are not creating a commodity that will be marketed, nor are we creating a business to market such an item.
 # User Interface Design
-
+[Pictures of our User Interface Design can be found here.](https://github.com/COP4331Group12/F.R.E.D./tree/master/Markdown/UI_Design_Sketch)
 # Resource Management
 Our priority for this sprint is obtaining all the hardware required for the project (rc car, arduino, cameras) as well as setting up the classes and the github for shared working purposes. Because we are only working on one project, formal resource management is less important than it ordinarily would be if we had multiple projects.
 
@@ -43,7 +43,7 @@ Because the RC car has multiple parts that need to run in real time, we will nee
 * We adopted a very strict error resolution policy for this project, completely stopping the  car in order to recalibrate any errors. Our specific fault tolerances are listed below.
 
 * User Interface
-    * Any user interface errors that are caught will not close the user interface application. Instead we will log any errors into the debug console.[Link](https://github.com/COP4331Group12/F.R.E.D./tree/master/Markdown/UI_Design_Sketch)
+    * Any user interface errors that are caught will not close the user interface application. Instead we will log any errors into the debug console.
 
 * Camera
     * If we recieve corrupted or invalid camera data we will adopt the "Last valid" resolution policy. That is taking the last valid frame until we recieve a valid frame to show in the feed.
