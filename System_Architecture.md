@@ -24,7 +24,7 @@ Because the RC car has multiple parts that need to run in real time, we will nee
 
 # Scalability
 * Capability for multiple car profiles
-* Neural Network expandable through training
+* Ability to add more signs to train the neural network on
 
 # Interoperability
 * Arduino to PC - Wifi
