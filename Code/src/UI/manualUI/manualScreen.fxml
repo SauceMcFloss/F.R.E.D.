@@ -14,7 +14,7 @@
              <VBox alignment="CENTER" spacing="30" BorderPane.alignment="BOTTOM_CENTER">
                  <Button fx:id="upButton" mnemonicParsing="false" prefHeight="170.0" prefWidth="132.0" styleClass="forward-arrow-button" text="Go" BorderPane.alignment="CENTER" />
                  <Button fx:id="backButton" mnemonicParsing="false" prefHeight="167.0" prefWidth="129.0" styleClass="backward-arrow-button" text="Back" BorderPane.alignment="CENTER" />
-               <JFXSlider fx:id="turnSlider" max="100" min="-100.0" scaleX="2" scaleY="2" maxWidth="500" minHeight="160" onMouseReleased="#resetSlider" showTickLabels="true" showTickMarks="true" value="0">
+               <JFXSlider fx:id="turnSlider" max="100" min="-100.0" scaleX="2" scaleY="2" maxWidth="500" minHeight="160" showTickLabels="true" showTickMarks="true" value="0">
                   <padding>
                      <Insets left="40.0" right="40.0" top="60.0" />
                   </padding>
