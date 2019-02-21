@@ -23,7 +23,8 @@ Each item should link to the actual product, be it a google spreadsheet, google 
   - [Class Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Class_Diagram.jpg)
   - [Sequence Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Sequence_Diagram.jpg)
 * [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
-* [Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/src/Tests/UI/manualUI)
+* [Arduino Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/ArduinoSource)
+* [Java Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/src/Tests)
 * Product Demonstration
   - [Images](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
   - [Videos](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Youtube_Video_Demos.md)
