@@ -8,4 +8,4 @@
 | 005 | As a user, I want to the system to be able to recognize and react to a end of course sign| 8 | 2 | If the system can read and respond to a end of course sign before driving past the sign | NOT STARTED |
 | 006 | As a user, I want to be able to control all system functions through a user interface on a computer| 7 | 1 | If all defined functions can be perfromed using only the user interface | WORKING |
 | 007 | As a user, I want the car to be able to drive within 2 white lanes on either side autonomously| 8 | 1 | If the car can complete a course while always remaning in between the two lanes | WORKING |
-| 008 | As a user, I want to be able to control the car using a radio antena to a radio reciever on the car| 8 | 1 | If the car can perform all functions issued through the radio | WORKING |
+| 008 | As a user, I want to be able to control the car remotely from a computer via point-to-point wifi using TCP| 8 | 1 | If the car can perform functions issued through wifi | WORKING |
