@@ -71,7 +71,7 @@ public class networkUtility
     public String sendCommand(String message)
     {
 
-        String response = "we got fucked";
+        String response = "We did not get a request";
 
         if(socket == null)
         {
