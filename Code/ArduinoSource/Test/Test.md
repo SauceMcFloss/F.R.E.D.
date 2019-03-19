@@ -13,7 +13,8 @@
 * Print Out Should Attempt To Connect Then Print The WiFi Information
 
 ## ServerTest.ino //Requires Arduino IDE and Putty
-* * With Arduino Uno Wifi Rev 2 plugged In to pc
+**Do Not Run Before WifiTest.ino
+* With Arduino Uno Wifi Rev 2 plugged In to pc
 * Open WifiTest.ino
 * Attatch The secret.h File
 * Upload To Board
