@@ -42,7 +42,7 @@ Each item should link to the actual product, be it a google spreadsheet, google 
 * [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
 * [Arduino Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/ArduinoSource/Test)
 * [Java Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/src)
- - Test cases for Java are in the same folder as the class it tests.
+ Test cases for Java are in the same folder as the class it tests.
 * Product Demonstration
   - [Images](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
   - [Videos](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Youtube_Video_Demos.md)
