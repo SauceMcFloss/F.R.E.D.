@@ -15,7 +15,7 @@ Our group aims to create a semi-automatically radio-controlled car that can pote
 Each item should link to the actual product, be it a google spreadsheet, google doc, github markdown file, etc. Do not link to a markdown file that contains only a link to another location - link directly from the appropriate item below. Add any additional items required for the specific sprint submission.
 
 * [Product Backlog](https://github.com/COP4331Group12/F.R.E.D./blob/master/ProductBacklog.md)
-* [Sprint Backlog]( )
+* [Sprint Backlog](https://github.com/COP4331Group12/F.R.E.D./blob/master/Sprint_Backlog1.md)
   * [Burndown Chart](https://drive.google.com/file/d/18vMH9waBDO9OKegmeN9Cmw2NXagwG2h3/view?usp=sharing)
 * [Requirements](https://github.com/COP4331Group12/F.R.E.D./blob/master/Requirements.md)
 * Design Documents
