@@ -10,14 +10,14 @@
 |            007 |           003 | The controlling computer should be able to recognize a stop sign before the car drives past the sign | Unverified |
 |            008 |           004 | The controlling computer should be able to recognize a stop sign before the car drives past the slow sign | Unverified |
 |            009 |           005 | The controlling computer should be able to recognize a stop sign before the car drives past the end of course sign | Unverified |
-|            010 |           006 | There will be a button controlling the forward motion of the car | Unverified |
-|            011 |           006 | There will be a button controlling the backward motion of the car | Unverified |
-|            012 |           006 | There will be a slider to control left and right steering | Unverified |
-|            013 |           006 | Forward, backward, and slider steering will also have a keybinding for the keyboard | Unverified |
+|            010 |           006 | There will be a button controlling the forward motion of the car | Verified |
+|            011 |           006 | There will be a button controlling the backward motion of the car | Verified |
+|            012 |           006 | There will be a slider to control left and right steering | Verified |
+|            013 |           006 | Forward, backward, and slider steering will also have a keybinding for the keyboard | Verified |
 |            014 |           006 | There will be a UI component that will contain the video feed from the camera | Unverified |
-|            015 |           006 | There will be a UI component to display diagnostic and test data in a readabble format during runtime | Unverified |
-|            016 |           006 | There will be a method for switching between manual and autonomous mode in the UI during runtime | Unverified |
-|            017 |           006 | There will be a UI component for turning on and off autonomous operation | Unverified |
+|            015 |           006 | There will be a UI component to display diagnostic and test data in a readabble format during runtime | Verified |
+|            016 |           006 | There will be a method for switching between manual and autonomous mode in the UI during runtime | Verified |
+|            017 |           006 | There will be a UI component for turning on and off autonomous operation | Verified |
 |            028 |           006 | There will be a UI component for displaying a connection status to the car | Unverified |
 |            019 |           007 | There will be a method of detecting 'lanes' through the camera in the form of sheets of white printer paper | Unverified |
 |            020 |           007 | There will be a method to keep the car driving in between the lanes during the whole course| Unverified |
