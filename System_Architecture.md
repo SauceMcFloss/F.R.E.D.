@@ -11,7 +11,11 @@ Populate each section with information as it applies to your project. If a secti
 # Business Rules
 Business rules will likely not apply to this particular project because we are not creating a commodity that will be marketed, nor are we creating a business to market such an item.
 # User Interface Design
-[Pictures of our User Interface Design can be found here.](https://github.com/COP4331Group12/F.R.E.D./tree/master/Markdown/UI_Design_Sketch)
+[Manual Control](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images/User_Interface_Car_Control.png) is shown here.
+[Autonomous Control](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images/User_Interface_Start_Button.png) is shown here.
+
+Our user will open an application that has the aforementioned interface and will be able to choose between autonomous and manual controls. If autonomous control is selected, after toggling Start, the car will automatically begin driving forward and will respond to signs its camera reads. If manual control is selected, the user will be presented with a list of options to drive forward, backward, or turn.
+
 # Resource Management
 Our priority for this sprint is obtaining all the hardware required for the project (rc car, arduino, cameras) as well as setting up the classes and the github for shared working purposes. Because we are only working on one project, formal resource management is less important than it ordinarily would be if we had multiple projects.
 
