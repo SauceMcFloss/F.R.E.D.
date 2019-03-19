@@ -12,8 +12,8 @@ import org.opencv.objdetect.CascadeClassifier;
 import org.opencv.videoio.VideoCapture;
 	
 class SignDetect{
-	private static final int FRAME_HIEGHT = 1500;
-	private static final int FRAME_WIDTH = 2000;
+	private static final int FRAME_HIEGHT = 1000;
+	private static final int FRAME_WIDTH = 1500;
 	private static final String CAMERA_NAME = "Capture Sign";
 	
     public void detectAndDisplay(Mat frame, CascadeClassifier signCascade) {
@@ -60,8 +60,6 @@ class SignDetect{
         }
        
         VideoCapture capture = new VideoCapture(cameraDevice);
-        //VideoCapture captureStream = new VideoCapture();
-       //captureStream.open(/*Video streaming link*/);
         
         //Exits program if camera can not be opened with videocapture
         if (!capture.isOpened()) {
