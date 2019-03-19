@@ -124,6 +124,7 @@ public class manualScreenController
             }
         });
 
+
         //Key released listener
         scene.setOnKeyReleased(event -> {
             switch (event.getCode()) {

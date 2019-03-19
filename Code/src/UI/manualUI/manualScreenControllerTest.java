@@ -24,6 +24,7 @@ public class manualScreenControllerTest {
 
     }
 
+
     @Test
     public void resetSlider()
     {
