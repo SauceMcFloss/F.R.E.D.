@@ -1,5 +1,6 @@
 package UI.manualUI;
 
+import Network.networkUtility;
 import com.jfoenix.controls.JFXSlider;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -20,9 +21,12 @@ public class manualScreenController
     JFXSlider turnSlider;
 
 
+
     public void initialize()
     {
         Platform.runLater(this::createListener);
+        networkUtility.getInstance().connectToServer();
+        turnSlider.setOnMouseReleased(e -> turn());
     }
 
 
@@ -37,6 +41,48 @@ public class manualScreenController
         }
     }
 
+    private void turn()
+    {
+        int raw = (int)turnSlider.getValue();
+        String direction = raw > 0 ? "1" : "0";
+        String angle = String.valueOf(Math.abs(raw));
+        System.out.println(networkUtility.getInstance().sendCommand("3" + direction + angle));
+    }
+
+    public void goForward()
+    {
+        System.out.println(networkUtility.getInstance().sendCommand("1"));
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        setNeutral();
+
+    }
+
+    public void goBackward()
+    {
+        System.out.println(networkUtility.getInstance().sendCommand("2"));
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        setNeutral();
+    }
+
+    public void setNeutral()
+    {
+        System.out.println(networkUtility.getInstance().sendCommand("0"));
+    }
+
+
+
 
     private void goUpPressed()
     {
@@ -47,7 +93,9 @@ public class manualScreenController
     {
         upButton.getStyleClass().remove(upButton.getStyleClass().size()-1);
 
+
     }
+
 
 
 
