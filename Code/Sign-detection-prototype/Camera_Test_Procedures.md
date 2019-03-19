@@ -1,7 +1,11 @@
-|   | Action | Observation |
+Test U001
+
+|  Steps | Action | Observation |
 | --- | --- | --- |
-| 001 | The program is executed in automatous mode | The program opens a display window 1000 pixels by 1500 pixels. |
-| 001 | The program is executed in manual mode | The program opens a display window 1000 pixels by 1500 pixels. |
-| 001 | The program is executed in automatous mode | The program places the camera feed into the display window. |
-| 001 | The program is executed in manual mode | The program places the camera feed into the display window. |
-| 003 | A sign is placed within the camera view | The camera feed shows visual borders around the sign for the user to see. |
+| 001 | Execute the program | The program should open a display window 1000 pixels by 1500 pixels. |
+| 002 | Click on Manual | The display window should open up manual controls, including an Up and Down Button. |
+| 003 | Click on Up | The program should highlight the Up button, and the input value should read Up. |
+| 004 | Click on Down | The program should highlight the Down button, and the input value should read Down. |
+
+
+
