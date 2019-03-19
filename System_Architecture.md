@@ -1,6 +1,6 @@
 # Program Organization
 
-Populate each section with information as it applies to your project. If a section does not apply, explain why. Include diagrams (or links to diagrams) in each section, as appropriate. For example, sketches of the user interfaces along with an explanation of how the interface components will work; ERD diagrams of the database; rough class diagrams; context diagrams showing the system boundary; etc.
+Our project has five main components: the user interface that the user sees, a controller paired with the user interface that the accepts the user's inputs, an Arduino board that remotely reads those user inputs and outputs movement for the RC car, a camera which sends live feed back to the computer, and then an additional classifier which parses the camera's live feed and can send instructions autonomously to the Arduino board itself.
 
 # Major Classes
 [Major Classes Document](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/MajorClasses.md)
