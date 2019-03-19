@@ -13,9 +13,9 @@ public class networkUtility
 {
     private static final int port = 80;
     private static final String host = "172.20.10.8";
-    private static Socket socket;
-    private static PrintWriter out;
-    private static BufferedReader in;
+    static Socket socket;
+    static PrintWriter out;
+    static BufferedReader in;
 
     private static networkUtility networkUtility;
 
@@ -96,13 +96,20 @@ public class networkUtility
 
     public void closeServerConnection()
     {
+        if(socket == null)
+        {
+            return;
+        }
+
         out.close();
+        out = null;
 
         System.out.println("\nClosed output stream");
 
         try {
 
             in.close();
+            in = null;
 
         } catch (IOException e) {
 
@@ -114,6 +121,7 @@ public class networkUtility
 
         try {
             socket.close();
+            socket = null;
         } catch (IOException e) {
             e.printStackTrace();
         }
