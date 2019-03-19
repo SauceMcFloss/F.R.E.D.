@@ -31,9 +31,8 @@ Because the RC car has multiple parts that need to run in real time, we will nee
 * camera to PC - Wifi -> URL
 
 # Internationalization/Localization
-* Input
-  * camera
-  * user inputs through buttons on the UI
+We will not be supporting translating our project into languages other than English.
+
 # Error Processing
 * We will use a combination of exceptions and assertions.
 * If an issue exists with inputs for car functions, program will stop the car.
