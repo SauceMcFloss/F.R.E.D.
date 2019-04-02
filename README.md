@@ -46,4 +46,22 @@ Each item should link to the actual product, be it a google spreadsheet, google 
 * Product Demonstration
   - [Images](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
   - [Videos](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Youtube_Video_Demos.md)
+  
+  ## Sprint 3
+
+* [Product Backlog](https://github.com/COP4331Group12/F.R.E.D./blob/master/ProductBacklog.md)
+* [Sprint Backlog](https://github.com/COP4331Group12/F.R.E.D./blob/master/Sprint_Backlog2.md)
+  * [Burndown Chart](https://docs.google.com/spreadsheets/d/10S80-vCixam7lW2yfPUcZB6qMGkhUVMaUCMdWhV3SIE/edit?usp=sharing)
+* [Requirements](https://github.com/COP4331Group12/F.R.E.D./blob/master/Requirements.md)
+* Design Documents
+  - [System Architecture](https://github.com/COP4331Group12/F.R.E.D./blob/master/System_Architecture.md)
+  - [Class Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Class_Diagram.jpg)
+  - [Sequence Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Sequence_Diagram.jpg)
+* [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
+* [Arduino Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/ArduinoSource/Test)
+* [Java Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/src) (Note: Test cases for Java are in the same folder as the class it tests. i.e. UI/manualUI/ and Network/)
+* [Manual Test Cases](https://github.com/COP4331Group12/F.R.E.D./blob/master/Manual%20Test%20Cases.md)
+* Product Demonstration
+  - [Images](https://github.com/COP4331Group12/F.R.E.D./blob/master/Images)
+  - [Videos](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Youtube_Video_Demos.md)
 
