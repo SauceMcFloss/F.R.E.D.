@@ -2,7 +2,7 @@
 F.R.E.D The Semi-Autonomous RC Car
 
 ## Team Members
-- Devin Draizin
+- [Devin Draizin](https://github.com/DevinDraizin)
 - Cameron Mortus
 - Hylton Williamson
 - Kyle Wu
