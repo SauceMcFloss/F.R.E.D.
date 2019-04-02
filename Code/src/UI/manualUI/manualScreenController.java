@@ -1,12 +1,14 @@
 package UI.manualUI;
 
 import Network.networkUtility;
+import arduinoControl.Car;
 import com.jfoenix.controls.JFXSlider;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import logs.Logger;
 
 public class manualScreenController
 {
@@ -24,9 +26,9 @@ public class manualScreenController
 
     public void initialize()
     {
+
         Platform.runLater(this::createListener);
-        networkUtility.getInstance().connectToServer();
-        turnSlider.setOnMouseReleased(e -> turn());
+
     }
 
 
@@ -41,46 +43,29 @@ public class manualScreenController
         }
     }
 
-    private void turn()
+    public void turn()
     {
         int raw = (int)turnSlider.getValue();
         String direction = raw > 0 ? "1" : "0";
         String angle = String.valueOf(Math.abs(raw));
-        System.out.println(networkUtility.getInstance().sendCommand("3" + direction + angle));
+
+        Car.getInstance().turnCar(direction,angle);
     }
 
     public void goForward()
     {
-        System.out.println(networkUtility.getInstance().sendCommand("1"));
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        setNeutral();
-
+        Car.getInstance().moveCarForward();
     }
 
     public void goBackward()
     {
-        System.out.println(networkUtility.getInstance().sendCommand("2"));
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        setNeutral();
+        Car.getInstance().moveCarBackward();
     }
 
     public void setNeutral()
     {
-        System.out.println(networkUtility.getInstance().sendCommand("0"));
+       Car.getInstance().setCarNeutral();
     }
-
 
 
 
@@ -98,7 +83,6 @@ public class manualScreenController
 
 
 
-
     //Initialize key listeners and bind keys to proper control methods.
     private void createListener()
     {
@@ -106,16 +90,16 @@ public class manualScreenController
 
         if(scene == null)
         {
-            System.out.println("null scene");
+            Logger.getInstance().logErrorMessage("Failed to bind keys: null scene");
             return;
         }
 
         //Key pressed listener
         scene.setOnKeyPressed(event -> {
             switch (event.getCode()) {
-                case W: goUpPressed(); break; //Forward
+                case W: goForward(); break; //Forward
                 case A:  break;   //Left
-                case S:  break;   //Backward
+                case S:  goBackward(); break;   //Backward
                 case D:  break;   //Right
                 case E:  break;   //Right-Forward
                 case Q:  break;   //Left-Forward
@@ -128,14 +112,14 @@ public class manualScreenController
         //Key released listener
         scene.setOnKeyReleased(event -> {
             switch (event.getCode()) {
-                case W: goUpReleased(); break; //Forward
-                case A:  break;   //Left
-                case S:  break;   //Backward
-                case D:  break;   //Right
-                case E:  break;   //Right-Forward
-                case Q:  break;   //Left-Forward
-                case Z:  break;   //Left-Backward
-                case C:  break;   //Right-Backward
+                case W: setNeutral(); break; //Forward
+                case A: setNeutral(); break;   //Left
+                case S: setNeutral(); break;   //Backward
+                case D: setNeutral(); break;   //Right
+                case E: setNeutral(); break;   //Right-Forward
+                case Q: setNeutral(); break;   //Left-Forward
+                case Z: setNeutral(); break;   //Left-Backward
+                case C: setNeutral(); break;   //Right-Backward
             }
         });
     }
