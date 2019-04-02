@@ -1,34 +1,43 @@
 package UI;
 
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import logs.Logger;
+
 
 public class mainScreenController
 {
     @FXML
-    TextArea debugConsole;
+    TextArea Console;
 
     public void initialize()
     {
-
-
+        initializeConsole();
+        initializeAutoScroll();
     }
 
-    //Define function to be able to set a debug message
-    //to the console from anywhere in the program
-    public void addConsoleMessage(String message)
+
+    private void initializeConsole()
     {
-        if(debugConsole.getText().isEmpty())
-        {
-            debugConsole.setText("-> " + message);
-        }
-        else
-        {
-            debugConsole.setText(debugConsole.getText().concat("\n\n-> ").concat(message));
-        }
+        Console.textProperty().bindBidirectional(Logger.getInstance().getObservableMasterLog());
+        Logger.getInstance().logMessage("Setting up logger...");
+        Logger.getInstance().logMessage("Logger initialized");
     }
 
+
+    private void initializeAutoScroll()
+    {
+        Console.textProperty().addListener(new ChangeListener<Object>() {
+            @Override
+            public void changed(ObservableValue<?> observable, Object oldValue, Object newValue)
+            {
+                Console.setScrollTop(Double.MIN_VALUE);
+            }
+        });
+    }
 
 
 

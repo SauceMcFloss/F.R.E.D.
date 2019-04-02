@@ -54,7 +54,7 @@
                      <children>
                         <Label text="This is where the live feed will go" />
                      </children></Pane>
-                   <TextArea fx:id="debugConsole" editable="false" promptText="Debug Console" VBox.vgrow="ALWAYS" wrapText="true">
+                   <TextArea fx:id="Console" editable="false" promptText="Console" VBox.vgrow="ALWAYS" wrapText="true">
 
                    </TextArea>
                </children>
