@@ -28,6 +28,8 @@ public class Car
     private static volatile boolean canMoveBack = true;
     private static volatile boolean canMoveForward = true;
 
+    private static volatile boolean trackDistance = false;
+
 
     private Car() {}
 
@@ -42,14 +44,36 @@ public class Car
         return car;
     }
 
+
+    //Samples distance at 500Hz and stores it inside 'distanceToSign'
     public void startDistanceTracking()
     {
+        trackDistance = true;
 
+        new Thread(() -> {
+
+            while(trackDistance)
+            {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                String distance = networkUtility.getInstance().sendCommand(distanceCode);
+                Logger.getInstance().logMessage("[Server] -> " + distance + " cm");
+
+                distanceToSign = Integer.valueOf(distance);
+            }
+
+
+
+        }).start();
     }
 
     public void stopDistanceTracking()
     {
-
+        trackDistance = false;
     }
 
 
