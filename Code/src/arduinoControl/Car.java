@@ -18,6 +18,8 @@ public class Car
     private static final String backwardCode = "2";
     private static final String distanceCode = "4";
 
+    public static volatile int distanceToSign;
+
 
     //Since the car cannot switch immediately from forward to backward
     //or vice versa before stopping, we need to create a timer thread to
@@ -25,6 +27,7 @@ public class Car
     //to tell when we can send a command to the server.
     private static volatile boolean canMoveBack = true;
     private static volatile boolean canMoveForward = true;
+
 
     private Car() {}
 
@@ -39,26 +42,36 @@ public class Car
         return car;
     }
 
+    public void startDistanceTracking()
+    {
 
-    //Moves car forward indefinitely at the preset speed
+    }
+
+    public void stopDistanceTracking()
+    {
+
+    }
+
+
+    //Moves car forward indefinitely at the preset speed while checking
+    //to make sure we don't bind gears by switching too fast
     public void moveCarForward()
     {
-        waitForBackwardStop();
+        lockBackward();
 
-        while (!canMoveForward){}
+        while(!canMoveForward){}
 
-        Logger.getInstance().logMessage("Sending forward command...");
         Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(forwardCode));
     }
 
-    //Moves the car backward indefinitely at the preset speed
+    //Moves the car backward indefinitely at the preset speed while checking
+    //to make sure we don't bind gears by switching too fast
     public void moveCarBackward()
     {
-        waitForForwardStop();
+        lockForward();
 
-        while (!canMoveBack){}
+        while(!canMoveBack){}
 
-        Logger.getInstance().logMessage("Sending backward command...");
         Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(backwardCode));
     }
 
@@ -67,7 +80,6 @@ public class Car
     //is required for friction to stop the motion.
     public void setCarNeutral()
     {
-        Logger.getInstance().logMessage("Sending neutral command...");
         Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(neutralCode));
     }
 
@@ -77,11 +89,14 @@ public class Car
     //to 50 specifying how far to turn, 50 being a full turn.
     public void turnCar(String direction, String angle)
     {
-        Logger.getInstance().logMessage("Sending turn command...");
         Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand("3" + direction + angle));
     }
 
-    private void waitForForwardStop()
+    //We need to wait for the car to stop moving forward
+    //before we can move backward to prevent binding. To
+    //solve that, we found the stopping time and force the
+    //control methods to wait until this lock is finished
+    private void lockBackward()
     {
         new Thread(() -> {
 
@@ -91,7 +106,6 @@ public class Car
                 for(int i=0; i<4; i++)
                 {
                     Thread.sleep(1000);
-                    //System.out.println("Thing" + i);
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -102,7 +116,12 @@ public class Car
         }).start();
     }
 
-    private void waitForBackwardStop()
+
+    //This is the same as locking backward except for forward.
+    //Because reverse is slower than forward, we don't have to wait
+    //as long for the car to come to a stop and as a result we can
+    //lock for less time here.
+    private void lockForward()
     {
         new Thread(() -> {
 
@@ -112,7 +131,6 @@ public class Car
                 for(int i=0; i<3; i++)
                 {
                     Thread.sleep(1000);
-                    //System.out.println("Thing" + i);
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
