@@ -65,9 +65,10 @@ Test A002
 | 15. | Fill in the section labeled Host Name (or IP address) with the IP address listed in the Serial Monitor. | The IP Address should now be typed into the Host Name (or IP address) section.
 | 16. | Fill in the section labeled Port with 80. | The number 80 should now be typed into the Port.|
 | 17. | Select TelNet. | A selection dot should appear next to TelNet.|
-| 18. | Click Open. | 
+| 18. | Click Open. | A PuTTY window should open that reads "Hello, Client!|
+| 19. | Type in a single character and select enter. | The window should return "Hello \_\_", in which the underscore will be replaced with the letter typed in. |
+| 20. | Type in multiple characters and select enter. | The window should return "Hello \_\_ Hello \_\_ Hello \_\_..." in which the underscores will each be different consecutive letters of the multiple character entry. |
 
- 
+
 ServerTest.ino
 Once you see ServerStart, you can begin.
-
