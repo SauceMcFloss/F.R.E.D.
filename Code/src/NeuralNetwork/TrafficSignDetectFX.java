@@ -1,6 +1,5 @@
 package NeuralNetwork;
 
-
 import java.io.ByteArrayInputStream;
 
 
@@ -19,6 +18,14 @@ import org.opencv.videoio.VideoCapture;
 
 import javafx.scene.image.*;
 
+/*
+ * This class starts the camera and processes the frames seen by
+ * capturing a frame, processing it with the classifier, and 
+ * creating a matrix of Rects and based on the size of the
+ * array we can tell if a sign was found. Then the image is then
+ * updated to be displayed.
+ */
+
 public class TrafficSignDetectFX
 {
 
@@ -34,23 +41,21 @@ public class TrafficSignDetectFX
 	private MatOfRect signDetections;
 	public static volatile boolean signFound = false;
 	
-
-
-
-
 	public void setDisplay(ImageView display) {
 		this.display = display;
 	}
 
 	public TrafficSignDetectFX() {
-		webSource = new VideoCapture(0);
-		myThread = new DaemonThread(); // create object of thread class
+		webSource = new VideoCapture(0); /*Sets where to get footage from "0":front facing cam
+										  *"1":secondary "http://.../video": IP stream
+										  */
+		myThread = new DaemonThread();
 		Thread t = new Thread(myThread);
 		t.setDaemon(true);
 		myThread.runnable = true;
 		frame = new Mat();
 		mem = new MatOfByte();
-		signDetect = new CascadeClassifier("NeuralNetwork/stopsign_classifier.xml");
+		signDetect = new CascadeClassifier("NeuralNetwork/stopsign_classifier.xml"); //Loads classifier
 		signDetections = new MatOfRect();
 		t.start(); // start thread
 	}
@@ -73,16 +78,16 @@ public class TrafficSignDetectFX
 							}
 
 							if (signDetections.toArray().length > 0) {// If sign was found in view
-								if (!signFound) {// If sign found after not previous being seen
-									////// Signal car to stop///////////////////////////
-									System.out.println("STOP IT");
+								if (!signFound) {// If first time frame sign seen
+									System.out.println("STOP CAR");
 									signFound = true;
 								}
+								//Draws borders around the sign/signs
 								for (Rect rect : signDetections.toArray()) {
 									Imgproc.rectangle(frame, rect.tl(), rect.br(), new Scalar(0, 255, 0));
 								}
 							}
-							
+							//Processes the image to be displayed through ImageView
 							Imgcodecs.imencode(".bmp", frame, mem);
 							image = new Image(new ByteArrayInputStream(mem.toArray()));
 							display.setImage(image);
