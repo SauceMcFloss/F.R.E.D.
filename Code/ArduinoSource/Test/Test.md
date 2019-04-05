@@ -23,8 +23,8 @@
 | 7. | Go to Tools and open Serial Monitor | A blank pop-up should appear on the screen.
 | 8. | Go to Tools and mouse over Board| Board should be specifically named
 | 9. | Go to Tools and mouse over Port | The Port should be specifically named after the port that it is 
-| 10. | Click on the Upload button in the Arduino IDE to upload to board | The 
-| 11. | The print out should reveal that the Arduino is attempting to connect | Every ten seconds the screen will print out "Attempting to connect to WPA SSID"
+| 10. | Click on the Upload button in the Arduino IDE to upload to board | The Serial Monitor should print "Attempting to connect to WPA SSID" |
+| 11. | The print out should continuously reveal that the Arduino is attempting to connect | Every ten seconds the screen will print out "Attempting to connect to WPA SSID"
 | 12. | The wifi should connect after some period of time. | Once connected, the serial monitor should display "You're connected to the networkSSID: 'NetworkNameOfChoice'|
 
 
