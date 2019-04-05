@@ -13,6 +13,7 @@
 * Print Out Should Attempt To Connect Then Print The WiFi Information
 
 |Step     |Action |Observation |
+| --- | ------------------------------------------------------------------------------| -----------------------------------------|
 | 1. | Connect the Arduino Uno Wifi Rev 2 into the PC via a USB port | The Arduino Uno's green LED should light up, and the computer should register that the Arduino Uno has been connected as a USB message. |
 | 2. | Open up the Arduino IDE | The Arduino IDE should pop up on the screen.| 
 | 3. | Open WifiTest.ino in the Arduino IDE| The WifiTest.ino should display itself in the Arduino IDE.|
