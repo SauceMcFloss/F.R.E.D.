@@ -12,13 +12,15 @@ import logs.Logger;
 
 import java.io.IOException;
 
+import org.opencv.core.Core;
+
 public class main extends Application
 {
 
     private void closeDownOperations()
     {
 
-        Car.getInstance().stopDistanceTracking();
+       // Car.getInstance().stopDistanceTracking();
         //Car.getInstance().shutDownCar();
         networkUtility.getInstance().closeServerConnection();
         Logger.getInstance().closeMasterLogFile();
@@ -27,7 +29,7 @@ public class main extends Application
     private void startUpOperations()
     {
         networkUtility.getInstance().connectToServer();
-        Car.getInstance().startDistanceTracking();
+        //Car.getInstance().startDistanceTracking();
     }
 
     @Override
@@ -54,6 +56,7 @@ public class main extends Application
 
     public static void main(String[] args)
     {
+    	System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         launch(args);
     }
 }
