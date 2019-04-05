@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.image.ImageView?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/primaryTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.mainScreenController">
    <children>
       <BorderPane stylesheets="@CSS/primaryTheme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -21,14 +22,9 @@
          <top>
             <MenuBar BorderPane.alignment="CENTER">
               <menus>
-                <Menu mnemonicParsing="false" text="Settings">
+                <Menu mnemonicParsing="false" text="Options">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Information">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" text="Information"/>
                   </items>
                 </Menu>
               </menus>
@@ -52,9 +48,10 @@
                <children>
                    <Pane minHeight="450.0" minWidth="600.0" style="-fx-background-color: #ffffff;">
                      <children>
-                        <Label text="This is where the live feed will go" />
+                        <ImageView fx:id="imageView">
+                        </ImageView>
                      </children></Pane>
-                   <TextArea fx:id="Console" editable="false" promptText="Console" VBox.vgrow="ALWAYS" wrapText="true">
+                   <TextArea fx:id="Console" editable="false" promptText="Console" wrapText="true" VBox.vgrow="ALWAYS">
 
                    </TextArea>
                </children>

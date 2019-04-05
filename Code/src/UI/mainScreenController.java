@@ -1,10 +1,10 @@
 package UI;
 
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import NeuralNetwork.TrafficSignDetectFX;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.ImageView;
 import logs.Logger;
 
 
@@ -13,30 +13,46 @@ public class mainScreenController
     @FXML
     TextArea Console;
 
+    @FXML
+    ImageView imageView;
+
     public void initialize()
     {
         initializeConsole();
         initializeAutoScroll();
+        startClassifier();
+    }
+
+
+    private void startClassifier()
+    {
+        TrafficSignDetectFX classifier = new TrafficSignDetectFX();
+        classifier.setDisplay(imageView);
     }
 
 
     private void initializeConsole()
     {
+
+
         Console.textProperty().bindBidirectional(Logger.getInstance().getObservableMasterLog());
         Logger.getInstance().logMessage("Setting up logger...");
         Logger.getInstance().logMessage("Logger initialized");
+
     }
 
 
     private void initializeAutoScroll()
     {
-        Console.textProperty().addListener(new ChangeListener<Object>() {
-            @Override
-            public void changed(ObservableValue<?> observable, Object oldValue, Object newValue)
+        Logger.getInstance().getObservableMasterLog().addListener((observable, oldValue, newValue) -> {
+            try
             {
-                Console.setScrollTop(Double.MIN_VALUE);
-            }
+                Console.selectPositionCaret(Console.getLength());
+                Console.deselect();
+            }catch (IndexOutOfBoundsException e) {}
+
         });
+
     }
 
 
