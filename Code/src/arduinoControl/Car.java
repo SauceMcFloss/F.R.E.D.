@@ -13,12 +13,15 @@ public class Car
 {
     private static Car car;
 
-    private static final String neutralCode = "0";
-    private static final String forwardCode = "1";
-    private static final String backwardCode = "2";
-    private static final String distanceCode = "4";
+    public static final String neutralCode = "0";
+    public static final String forwardCode = "1";
+    public static final String backwardCode = "2";
+    public static final String distanceCode = "4";
+    public static final String endCode = "9";
 
-    public static volatile int distanceToSign;
+    public static volatile int distanceToSign = -1;
+
+    private static String state;
 
 
     //Since the car cannot switch immediately from forward to backward
@@ -31,7 +34,11 @@ public class Car
     private static volatile boolean trackDistance = false;
 
 
-    private Car() {}
+    private Car()
+    {
+        state = neutralCode;
+        this.turnCar("0","0");
+    }
 
     public static Car getInstance()
     {
@@ -44,18 +51,41 @@ public class Car
         return car;
     }
 
+    public void shutDownCar()
+    {
+        Logger.getInstance().logMessage(networkUtility.getInstance().sendCommand(endCode));
+    }
+
+    public String getCarState()
+    {
+        return state;
+    }
+
 
     //Samples distance at 500Hz and stores it inside 'distanceToSign'
     public void startDistanceTracking()
     {
+        if(!networkUtility.getInstance().isConnectedToServer())
+        {
+            Logger.getInstance().logErrorMessage("Cannot start distance tracking: Server is not connected");
+
+            return;
+        }
+
         trackDistance = true;
 
         new Thread(() -> {
 
             while(trackDistance)
             {
+
+                if(!networkUtility.getInstance().isConnectedToServer())
+                {
+                    return;
+                }
+
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(12000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -63,9 +93,16 @@ public class Car
                 String distance = networkUtility.getInstance().sendCommand(distanceCode);
                 Logger.getInstance().logMessage("[Server] -> " + distance + " cm");
 
-                distanceToSign = Integer.valueOf(distance);
-            }
+                try
+                {
+                    distanceToSign = Integer.valueOf(distance);
 
+                }catch (NumberFormatException e)
+                {
+                    Logger.getInstance().logErrorMessage("Bad Distance value");
+                }
+
+            }
 
 
         }).start();
@@ -86,6 +123,8 @@ public class Car
         while(!canMoveForward){}
 
         Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(forwardCode));
+
+        state = forwardCode;
     }
 
     //Moves the car backward indefinitely at the preset speed while checking
@@ -97,6 +136,8 @@ public class Car
         while(!canMoveBack){}
 
         Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(backwardCode));
+
+        state = backwardCode;
     }
 
     //This sets the motor to neutral which will be our stopping
@@ -105,6 +146,8 @@ public class Car
     public void setCarNeutral()
     {
         Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(neutralCode));
+
+        state = neutralCode;
     }
 
 
