@@ -12,7 +12,9 @@
 * Open Serial Monitor
 * Print Out Should Attempt To Connect Then Print The WiFi Information
 
-|Step     |Action |Observation |
+Test A001 - Testing WifiTest.ino and ensuring the Wifi is connected.
+
+| Step | Action | Observation |
 | --- | ------------------------------------------------------------------------------| -----------------------------------------|
 | 1. | Connect the Arduino Uno Wifi Rev 2 into the PC via a USB port | The Arduino Uno's green LED should light up, and the computer should register that the Arduino Uno has been connected as a USB message. |
 | 2. | Open up the Arduino IDE | The Arduino IDE should pop up on the screen.| 
@@ -40,4 +42,10 @@
 ** Use Telnet Connection With the IP ad Host Name and Port Number From secret.h
 * send one character and the system responds with Hello _ <- the character you typed
 * send Multiple Characters And Server Responds with Hello _ Hello_ Hello_
+
+Test A002
+
+| Step | Action | Observation |
+| --- | ------------------------------------------------------------------------------| -----------------------------------------|
+| 1. | Complete Test A001. | The Serial Monitor should display "You're connected to the networkSSID: 'NetworkNameOfChoice' |
 
