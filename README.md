@@ -50,7 +50,6 @@ Each item should link to the actual product, be it a google spreadsheet, google 
   ## Sprint 3
 
 * [Product Backlog](https://github.com/COP4331Group12/F.R.E.D./blob/master/ProductBacklog.md)
-
 * [Sprint Backlog](https://github.com/COP4331Group12/F.R.E.D./blob/master/Sprint_Backlog2.md)
   * [Burndown Chart](https://docs.google.com/spreadsheets/d/10S80-vCixam7lW2yfPUcZB6qMGkhUVMaUCMdWhV3SIE/edit?usp=sharing)
 * [Requirements](https://github.com/COP4331Group12/F.R.E.D./blob/master/Requirements.md)
