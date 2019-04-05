@@ -32,7 +32,7 @@ public class TrafficSignDetectFX
 	private Image image;
 	private ImageView display;
 	private MatOfRect signDetections;
-	boolean signFound = false;
+	public static volatile boolean signFound = false;
 	
 
 
