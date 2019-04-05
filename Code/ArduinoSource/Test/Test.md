@@ -4,7 +4,7 @@
 ## BasicFREDFunctionTest.ino
 * This Function Is A Loop Which You Upload To An Arduino To Ensure Wiring Is Correct And That Car Is Functioning.
 
-## Test A001 - Testing WifiTest.ino and ensuring the Wifi is connected. Requires Arduino IDE.
+### Test A001 - Testing WifiTest.ino and ensuring the Wifi is connected. Requires Arduino IDE.
 
 | Step | Action | Observation |
 | --- | ------------------------------------------------------------------------------| -----------------------------------------|
