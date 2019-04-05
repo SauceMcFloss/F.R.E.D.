@@ -21,7 +21,7 @@
 | 11. | The print out should continuously reveal that the Arduino is attempting to connect | Every ten seconds the screen will print out "Attempting to connect to WPA SSID"
 | 12. | The wifi should connect to the Arduino board. | Once connected, the serial monitor should display "You're connected to the networkSSID: 'NetworkNameOfChoice'|
 
-## Test A002 - Testing ServerTest.ino and ensuring the server sends back and forth. Requires Arduino IDE and PuTTY.
+### Test A002 - Testing ServerTest.ino and ensuring the server sends back and forth. Requires Arduino IDE and PuTTY.
 
 | Step | Action | Observation |
 | --- | ------------------------------------------------------------------------------| -----------------------------------------|
