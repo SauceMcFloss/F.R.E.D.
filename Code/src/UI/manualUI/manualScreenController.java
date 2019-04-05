@@ -1,6 +1,5 @@
 package UI.manualUI;
 
-import Network.networkUtility;
 import arduinoControl.Car;
 import com.jfoenix.controls.JFXSlider;
 import javafx.application.Platform;
@@ -24,18 +23,17 @@ public class manualScreenController
 
 
 
+
     public void initialize()
     {
-
         Platform.runLater(this::createListener);
-
     }
 
 
     //Whenever we drag the steering slider to a non 0 position we
     //want it to snap back to 0 after the user releases the mouse.
     //This method is bound to a onMouseReleased listener in manualScreen.fxml
-    public void resetSlider()
+    void resetSlider()
     {
         if(turnSlider.getValue() != 0.0)
         {
@@ -54,33 +52,47 @@ public class manualScreenController
 
     public void goForward()
     {
-        Car.getInstance().moveCarForward();
+        //Here we need to check the state of the car to prevent redundant commands
+        if(Car.getInstance().getCarState().compareTo(Car.forwardCode) != 0)
+        {
+            Car.getInstance().moveCarForward();
+        }
     }
 
     public void goBackward()
     {
-        Car.getInstance().moveCarBackward();
+        //Here we need to check the state of the car to prevent redundant commands
+        if(Car.getInstance().getCarState().compareTo(Car.backwardCode) != 0)
+        {
+            Car.getInstance().moveCarBackward();
+        }
+
     }
 
     public void setNeutral()
     {
-       Car.getInstance().setCarNeutral();
+        if(Car.getInstance().getCarState().compareTo(Car.neutralCode) != 0)
+        {
+            Car.getInstance().setCarNeutral();
+        }
+
     }
 
 
-
-    private void goUpPressed()
+    public void turnRight()
     {
-        upButton.getStyleClass().add("manual-hover");
+        Car.getInstance().turnCar("1","90");
     }
 
-    private void goUpReleased()
+    public void turnLeft()
     {
-        upButton.getStyleClass().remove(upButton.getStyleClass().size()-1);
-
-
+        Car.getInstance().turnCar("0","90");
     }
 
+    public void resetTurn()
+    {
+        Car.getInstance().turnCar("0","0");
+    }
 
 
     //Initialize key listeners and bind keys to proper control methods.
@@ -98,9 +110,10 @@ public class manualScreenController
         scene.setOnKeyPressed(event -> {
             switch (event.getCode()) {
                 case W: goForward(); break; //Forward
-                case A:  break;   //Left
-                case S:  goBackward(); break;   //Backward
-                case D:  break;   //Right
+                case A: turnLeft(); break;   //Left
+                case S: goBackward(); break;   //Backward
+                case D: turnRight(); break;   //Right
+                case R: resetTurn(); break;   //Center steering
                 case E:  break;   //Right-Forward
                 case Q:  break;   //Left-Forward
                 case Z:  break;   //Left-Backward
@@ -113,9 +126,9 @@ public class manualScreenController
         scene.setOnKeyReleased(event -> {
             switch (event.getCode()) {
                 case W: setNeutral(); break; //Forward
-                case A: setNeutral(); break;   //Left
+                case A: break;   //Left
                 case S: setNeutral(); break;   //Backward
-                case D: setNeutral(); break;   //Right
+                case D: break;   //Right
                 case E: setNeutral(); break;   //Right-Forward
                 case Q: setNeutral(); break;   //Left-Forward
                 case Z: setNeutral(); break;   //Left-Backward
