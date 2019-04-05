@@ -25,7 +25,7 @@ int status = WL_IDLE_STATUS;
 boolean stringComplete = false;
 boolean alreadyConnected = false;
 String inputString = "";
-
+String HELLO = "HELLO";
 
 
 void setup() 
@@ -81,7 +81,7 @@ void loop()
         {
           // read the bytes incoming from the client:
           char in = client.read();
-          client.println(' ', in);
+          client.println(in);
         }
       }
     }
