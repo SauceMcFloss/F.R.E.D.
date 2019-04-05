@@ -6,8 +6,8 @@
 
 #include <Servo.h>
 
-int throttlePin = 9;
-int steeringPin = 10;
+int throttlePin = 6;
+int steeringPin = 9;
 
 int throttleValue  = 0;
 int steeringValue  = 0;
