@@ -48,13 +48,14 @@ class Log
     }
 
 
-    public String getFilePath()
-    {
-        return filePath;
-    }
 
     void writeMessageToFile(String message)
     {
+        if(writer == null)
+        {
+            return;
+        }
+
         try {
 
             writer.write(message + "\n");
@@ -67,7 +68,7 @@ class Log
 
         } catch (IOException e)
         {
-            System.out.println("Something went wrong trying to create the " + filePath + " log");
+            System.out.println("Something went wrong trying to write \"" + message + "\" the " + filePath + " log");
         }
     }
 
@@ -78,6 +79,7 @@ class Log
             writer.write("EOF");
 
             writer.close();
+            writer = null;
         } catch (IOException e) {
             e.printStackTrace();
         }

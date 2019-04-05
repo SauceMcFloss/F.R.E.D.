@@ -41,7 +41,6 @@ public class Logger
 
 
 
-
     public void logMessage(String message)
     {
         masterLog.logMessage(message);
