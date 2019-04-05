@@ -6,3 +6,8 @@
 |||8|2|The RC car board is able to receive left turn commands | After pushing left on the user interface, the car board registers a left turn | Devin |
 |||8|2| The RC car board is able to receive right turn commands  | After pushing right on the user interface, the car board registers a right turn. | Devin |
 |||8|2| The RC car board is able to receive forward movement commands. | After pushing forward on the user interface, the car board registers forward movement. | Devin |
+
+Logger Function; Error Function; 
+Sensor Bar;
+Stop Sign;
+Anti-binding protocol
