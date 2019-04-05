@@ -1,12 +1,18 @@
 # Basic Test Codes And Functionality
 # Arduino Tests
 
-## BasicFREDFunctionTest.ino
+### Test A000 - Testing BasicFREDFunctionTest.ino and ensuring 
 * This Function Is A Loop Which You Upload To An Arduino To Ensure Wiring Is Correct And That Car Is Functioning.
+
+| Step | Action | Observation |
+| --- | ------------------------------------------------------------------------------| -----------------------------------------|
+| 1. | BasicFREDFunctionTest.ino in the Arduino IDE |
+| 2. | 
+| 3. | ground6 and 9
 
 ### Test A001 - Testing WifiTest.ino and ensuring the Wifi is connected. 
 
-Note that this test requires Arduino IDE.
+Note that this test requires Arduino IDE. The Serial Test should already have been completed.
 
 | Step | Action | Observation |
 | --- | ------------------------------------------------------------------------------| -----------------------------------------|
@@ -24,7 +30,7 @@ Note that this test requires Arduino IDE.
 | 12. | The wifi should connect to the Arduino board. | Once connected, the serial monitor should display "You're connected to the networkSSID: 'NetworkNameOfChoice'|
 
 ### Test A002 - Testing ServerTest.ino and ensuring the server sends back and forth.
-Note that this test requires Arduino IDE and PuTTy.
+Note that this test requires Arduino IDE and PuTTy. The Wifi Test A001 should have already been completed.
 
 | Step | Action | Observation |
 | --- | ------------------------------------------------------------------------------| -----------------------------------------|
@@ -49,3 +55,15 @@ Note that this test requires Arduino IDE and PuTTy.
 | 18. | Click Open. | A PuTTY window should open that reads "Hello, Client!|
 | 19. | Type in a single character and select enter. | The window should return "Hello \_\_", in which the underscore will be replaced with the letter typed in. |
 | 20. | Type in multiple characters and select enter. | The window should return the characters vertically. |
+
+### Test A003 - Sensors
+
+### Test A001 - Serial Test
+
+### Test A004 - Servos Test
+
+### Test A005 - Process Command Test
+This test requires the Serial Test to be completed first.
+
+### Test A006 - Drive Over Wifi Test
+This test requires all of the other tests to be completed.
