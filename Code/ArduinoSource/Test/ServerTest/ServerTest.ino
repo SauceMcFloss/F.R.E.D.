@@ -24,7 +24,7 @@ WiFiServer server(port);
 int status = WL_IDLE_STATUS;
 boolean stringComplete = false;
 boolean alreadyConnected = false;
-
+String inputString = "";
 
 
 
@@ -81,7 +81,7 @@ void loop()
         {
           // read the bytes incoming from the client:
           char in = client.read();
-          server.println(Hello,' ', in);
+          client.println(' ', in);
         }
       }
     }
