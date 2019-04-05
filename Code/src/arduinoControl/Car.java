@@ -62,6 +62,7 @@ public class Car
     }
 
 
+
     //Samples distance at 500Hz and stores it inside 'distanceToSign'
     public void startDistanceTracking()
     {
