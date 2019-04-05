@@ -36,6 +36,12 @@ public class networkUtility
         return networkUtility;
     }
 
+    public boolean isConnectedToServer()
+    {
+        return socket != null && socket.isConnected();
+
+    }
+
 
 
     public void connectToServer()
