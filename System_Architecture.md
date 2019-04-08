@@ -3,7 +3,7 @@
 [System Archtecture Diagram](https://github.com/COP4331Group12/F.R.E.D./blob/master/Group%20Twelve%20Project%20System%20Architectural%20Diagram.JPG)
 
 | Component | Description| User Stories Satisfied|
-|-----------|----------------------------| ----------|
+|---------|--------------------------| ----------|
 | RC Car | A remotely controlled car that contains batteries, an engine, wheels, and a frame with which to run. | 000 - 007  |
 | Arduino Board | A board placed upon the RC Car that changes the RC Car's movements based on values input from the User Application| | 
 | Server | Set up on wifi, the server allows communication between the user application on a coputer and the arduino board | 006, 007, 008 |
