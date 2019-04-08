@@ -4,7 +4,7 @@
 
 | Component | Description| User Stories Satisfied|
 |---------|---------------------| ----------|
-| RC Car | A remotely controlled car that contains batteries, an engine, wheels, and a frame with which to run. | 000 - 007  |
+| RC Car | A remotely controlled car that contains batteries, an engine, wheels, and a frame with which to run | 000 - 007  |
 | Arduino Board | A board placed upon the RC Car that changes the RC Car's movements based on values input from the User Application| 000 - 007 | 
 | Server | Set up on wifi, the server allows communication between the user application on a coputer and the arduino board | 006, 007, 008 |
 | Camera | Set up on wifi and placed on the front of the car, the camera records live feed and sends it to the user application in real time. | 001, 002, 005 |
