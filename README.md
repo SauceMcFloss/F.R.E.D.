@@ -54,7 +54,7 @@ Each item should link to the actual product, be it a google spreadsheet, google 
   * [Burndown Chart](https://docs.google.com/spreadsheets/d/10S80-vCixam7lW2yfPUcZB6qMGkhUVMaUCMdWhV3SIE/edit?usp=sharing)
 * [Requirements](https://github.com/COP4331Group12/F.R.E.D./blob/master/Requirements.md)
 * Design Documents
-  - [System Architecture](https://github.com/COP4331Group12/F.R.E.D./blob/master/System_Architecture.md)
+  - [System Architecture](System_Arch_Diagram.jpg)
   - [Class Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Class_Diagram.jpg)
   - [Sequence Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Sequence_Diagram.jpg)
 * [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
