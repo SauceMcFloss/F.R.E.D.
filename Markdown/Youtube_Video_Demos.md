@@ -3,3 +3,7 @@
 [Stop Sign Identification Demo](https://youtu.be/NsrzkOKJZMA)
 
 [TCP WiFi Demo](https://youtu.be/D83FLUe8gtw)
+
+[Autonomous Stopping Demo #1](https://youtu.be/c_kZfHLAVTg)
+
+[Autonomous Stopping #2](https://youtu.be/QBX5AbrmHy0)
