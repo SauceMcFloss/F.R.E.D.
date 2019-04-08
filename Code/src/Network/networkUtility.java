@@ -10,7 +10,9 @@ import java.io.PrintWriter;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-
+//The network interface uses a TCP connection with the arduino
+//in order to send commands. Since we are using TCP we have create
+//an input and output stream for receiving and sending commands
 public class networkUtility
 {
     private static final int port = 80;
@@ -44,6 +46,8 @@ public class networkUtility
 
 
 
+    //We attempt to connect to the server for 5 seconds before
+    //timing out and continuing
     public void connectToServer()
     {
 

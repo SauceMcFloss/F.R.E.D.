@@ -21,6 +21,7 @@ public class Car
 
     public static volatile int distanceToSign = -1;
 
+
     private static String state;
 
 
@@ -31,13 +32,29 @@ public class Car
     private static volatile boolean canMoveBack = true;
     private static volatile boolean canMoveForward = true;
 
+
+
     private static volatile boolean trackDistance = false;
 
+    private static volatile boolean autonomousMode = false;
 
     private Car()
     {
         state = neutralCode;
-        this.turnCar("0","0");
+        //this.turnCar("0","0");
+    }
+
+    public boolean getAutonomousMode() {
+        return autonomousMode;
+    }
+
+    public void setAutonomousMode(boolean autonomousMode) {
+        Car.autonomousMode = autonomousMode;
+    }
+
+    public String getState()
+    {
+        return state;
     }
 
     public static Car getInstance()
@@ -51,9 +68,19 @@ public class Car
         return car;
     }
 
+    public boolean isTrackingDistance()
+    {
+        return trackDistance;
+    }
+
+    //We send the car the endCode command in order to tell it that we intend to
+    //disconnect and no longer send any requests.
     public void shutDownCar()
     {
         Logger.getInstance().logMessage(networkUtility.getInstance().sendCommand(endCode));
+        Logger.getInstance().logMessage("Sent 9 command");
+
+        state = endCode;
     }
 
     public String getCarState()
@@ -63,7 +90,7 @@ public class Car
 
 
 
-    //Samples distance at 500Hz and stores it inside 'distanceToSign'
+    //Samples distance at 2000Hz and stores it inside 'distanceToSign'
     public void startDistanceTracking()
     {
         if(!networkUtility.getInstance().isConnectedToServer())
@@ -86,7 +113,7 @@ public class Car
                 }
 
                 try {
-                    Thread.sleep(12000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -49,6 +49,10 @@ class Log
 
 
 
+    //Whenever a message is logged anywhere in the system we will write it
+    //directly to the text file and then flush to make sure that even in a
+    //crash scenario we keep the last messages in the log. We also time stamp
+    //each log
     void writeMessageToFile(String message)
     {
         if(writer == null)

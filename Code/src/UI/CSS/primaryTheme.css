@@ -8,6 +8,13 @@
 
 }
 
+/*
+This is the only CSS file we will use for the UI. It includes
+the custom styles for each component and
+
+
+*/
+
 .root
 {
     -fx-background-color: -fx-primary;

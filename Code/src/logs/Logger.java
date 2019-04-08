@@ -4,6 +4,7 @@ package logs;
 //that will be written to standard text files throughout the program.
 //We also provide get methods so we can view the logs live if we need to.
 
+//This is really just a wrapper for the actual log file io
 
 import javafx.beans.property.SimpleStringProperty;
 

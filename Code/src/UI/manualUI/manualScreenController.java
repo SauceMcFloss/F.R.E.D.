@@ -26,6 +26,7 @@ public class manualScreenController
 
     public void initialize()
     {
+        Car.getInstance().setAutonomousMode(false);
         Platform.runLater(this::createListener);
     }
 
@@ -41,6 +42,10 @@ public class manualScreenController
         }
     }
 
+
+    //When ever a change is detected by the steering slider we
+    //call this method and use the UI data to create a server command
+    //and send the turn command.
     public void turn()
     {
         int raw = (int)turnSlider.getValue();
@@ -50,6 +55,9 @@ public class manualScreenController
         Car.getInstance().turnCar(direction,angle);
     }
 
+
+    //This is called when the forward button is pressed down, as well as when the
+    //'W' key is pressed.
     public void goForward()
     {
         //Here we need to check the state of the car to prevent redundant commands
@@ -59,6 +67,8 @@ public class manualScreenController
         }
     }
 
+    //This is called when the backward button is pressed down, as well as when the
+    //'S' key is pressed.
     public void goBackward()
     {
         //Here we need to check the state of the car to prevent redundant commands
@@ -69,6 +79,8 @@ public class manualScreenController
 
     }
 
+    //This is called whenever we release the forward or backward button or key
+    //Whenever we need to stop we can call this method
     public void setNeutral()
     {
         if(Car.getInstance().getCarState().compareTo(Car.neutralCode) != 0)
@@ -78,7 +90,15 @@ public class manualScreenController
 
     }
 
+    public void shutDown()
+    {
+        Car.getInstance().shutDownCar();
+    }
 
+
+
+    //These three methods are specifically bound to the keyboard
+    //To turn constant amounts every time we press the corresponding key
     public void turnRight()
     {
         Car.getInstance().turnCar("1","90");
@@ -96,6 +116,9 @@ public class manualScreenController
 
 
     //Initialize key listeners and bind keys to proper control methods.
+    //Since we want to only control the car while a button are key is being held down
+    //we send different commands depending on if we are pressing a key down or releasing
+    //the key
     private void createListener()
     {
         Scene scene = anchorPane.getScene();
@@ -114,6 +137,7 @@ public class manualScreenController
                 case S: goBackward(); break;   //Backward
                 case D: turnRight(); break;   //Right
                 case R: resetTurn(); break;   //Center steering
+                case SPACE: shutDown(); break;
                 case E:  break;   //Right-Forward
                 case Q:  break;   //Left-Forward
                 case Z:  break;   //Left-Backward
