@@ -4,11 +4,11 @@
 
 | Component | Description| User Stories Satisfied|
 |-----------|------------------------------| --------|
-| RC Car | A remotely controlled car that contains batteries, an engine, wheels, and a frame with which to run. | 000,  |
+| RC Car | A remotely controlled car that contains batteries, an engine, wheels, and a frame with which to run. | 000 - 007  |
 | Arduino Board | A board placed upon the RC Car that changes the RC Car's movements based on values input from the User Application| | 
-| Server | Set up on wifi, the server allows communication between the user application on a coputer and the arduino board | |
-| Camera | Also set up on wifi, the camera records live feed and sends it to the user application in real time. | 001, 002 |
-| User Application | This application is broken into several components: a classifier, a set of functions which sends values to the Arduino Board, and a user interface that accepts user inputs and changes the values of the functions sent to the Arduino Board | 003, 006, |
+| Server | Set up on wifi, the server allows communication between the user application on a coputer and the arduino board | 006, 007, 008 |
+| Camera | Also set up on wifi, the camera records live feed and sends it to the user application in real time. | 001, 002, 005 |
+| User Application | This application is broken into several components: a classifier, a set of functions which sends values to the Arduino Board, and a user interface that accepts user inputs and changes the values of the functions sent to the Arduino board | 003, 004, 005, 006 |
 
 Our project has five main components: the user interface that the user sees, a controller paired with the user interface that the accepts the user's inputs, an Arduino board that remotely reads those user inputs and outputs movement for the RC car, a camera which sends live feed back to the computer, and then an additional classifier which parses the camera's live feed and can send instructions autonomously to the Arduino board itself.
 
