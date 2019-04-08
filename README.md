@@ -57,6 +57,7 @@ Each item should link to the actual product, be it a google spreadsheet, google 
   - [System Architecture](System_Arch_Diagram.jpg)
   - [Class Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Class_Diagram.jpg)
   - [Sequence Diagrams](https://github.com/COP4331Group12/F.R.E.D./blob/master/Markdown/Sequence_Diagram.jpg)
+  - [Wiring Diagram](wiring_diagram.jpg)
 * [Source Code](https://github.com/COP4331Group12/F.R.E.D./blob/master/Code)
 * [Arduino Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/ArduinoSource/Test)
 * [Java Test Cases](https://github.com/COP4331Group12/F.R.E.D./tree/master/Code/src) (Note: Test cases for Java are in the same folder as the class it tests. i.e. UI/manualUI/ and Network/)
