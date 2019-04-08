@@ -1,3 +1,8 @@
+//Server Test
+//HardWare: Arduino Uno Wifi Rev 2,  
+//Serial Connection Required Run Serial Test Prior To This Test
+//Wifi Connection Required Run WifiTest Prior To This Test
+
 //#include <SPI.h>
 #include <WiFiNINA.h>
 #include <Server.h> 

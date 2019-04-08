@@ -23,6 +23,8 @@ const int port = SECRET_PORT;
 
 WiFiServer server(port);
 int status = WL_IDLE_STATUS;
+String inputString = "";
+boolean stringComplete = false;
 
 void setup() 
 {
@@ -97,6 +99,7 @@ void serialEvent()
 {
   while (Serial.available()) {
     // get the new byte:
+    
     char inChar = (char)Serial.read();
     // add it to the inputString:
     inputString += inChar;
