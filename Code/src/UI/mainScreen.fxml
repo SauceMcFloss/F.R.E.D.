@@ -45,7 +45,7 @@
          <right>
             <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="800.0" spacing="20" BorderPane.alignment="CENTER">
                <children>
-                   <Pane minHeight="450.0" minWidth="600.0" style="-fx-background-color: #ffffff;">
+                   <Pane minHeight="450.0" minWidth="600.0" style="-fx-background-color: #2A2E37;">
                      <children>
                         <ImageView fx:id="imageView">
                         </ImageView>
