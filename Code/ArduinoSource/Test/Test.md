@@ -14,10 +14,25 @@ The BasicFREDFunctionTest is a loop that once uploaded to the Arduino Board can 
 | 5. | After the test uploads to board, detach the Arduino Uno Wifi Rev 2 from the PC.| The Arduino should be disconnected from the computer.|
 | 6. | Attach wires from 6 and 9 of the Arduino port to the grounds 6 and 9 within the RC car.| The Arduino should be attached securely to the car.|
 | 7.| Turn on the RC car. | The car's power light should be turned on.
-| 7. | Wait as the Arduino loops through its commands. | The car will now move its wheels back and forth and turn.|
+| 7. | Wait as the Arduino loops through its commands. | The car will now move its wheels back and forth and turn left and right.|
 | 8. | After the loop completes, power down the car. | The car should stop moving. | 
 
-### Test A001 - Testing WifiTest.ino and ensuring the Wifi is connected. 
+### Test A001 - Testing SerialTest.ino and ensuring Serial Monitor functionality.
+
+The Serial Test simply tests that the functionality of the Serial Monitor.
+
+| Step | Action | Observation |
+| --- | ------------------------------------------------------------------------------| -----------------------------------------|
+| 1. | Connect the Arduino Uno Wifi Rev 2 into the PC via a USB port | The Arduino Uno's green LED should light up, and the computer should register that the Arduino Uno has been connected as a USB message. |
+| 2. | Open up the Arduino IDE | The Arduino IDE should pop up on the screen.| 
+| 3. | Open SerialTest.ino in the Arduino IDE | The BasicFREDFunctionTest.ino should display itself in the Arduino IDE.|
+| 4. | Upload the SerialTest.ino to the board by pressing the Upload button.| The Arduino IDE should display that the test is now uploading the board.|
+| 5. | Go to Tools and open Serial Monitor | A blank pop-up should appear on the screen.|
+| 6. | The Serial Monitor should allow typing. | The Serial Monitor should display "Hello". |
+| 7. | Type in letters and hit enter. | The typed letters should appear on the screen and then be returned vertically.|
+
+
+### Test A002 - Testing WifiTest.ino and ensuring the Wifi is connected. 
 
 Note that this test requires Arduino IDE. The Serial Test should already have been completed.
 
@@ -36,7 +51,7 @@ Note that this test requires Arduino IDE. The Serial Test should already have be
 | 11. | The print out should continuously reveal that the Arduino is attempting to connect | Every ten seconds the screen will print out "Attempting to connect to WPA SSID"
 | 12. | The wifi should connect to the Arduino board. | Once connected, the serial monitor should display "You're connected to the networkSSID: 'NetworkNameOfChoice'|
 
-### Test A002 - Testing ServerTest.ino and ensuring the server sends back and forth.
+### Test A003 - Testing ServerTest.ino and ensuring the server sends back and forth.
 Note that this test requires Arduino IDE and PuTTy. The Wifi Test A001 should have already been completed.
 
 | Step | Action | Observation |
@@ -63,7 +78,7 @@ Note that this test requires Arduino IDE and PuTTy. The Wifi Test A001 should ha
 | 19. | Type in a single character and select enter. | The window should return "Hello \_\_", in which the underscore will be replaced with the letter typed in. |
 | 20. | Type in multiple characters and select enter. | The window should return the characters vertically. |
 
-### Test A003 - Testing SensorTest.ino and ensuring the ultrasonic sensor is functional.
+### Test A004 - Testing SensorTest.ino and ensuring the ultrasonic sensor is functional.
 Note that this test requires Arduino IDE.
 
 | Step | Action | Observation |
@@ -76,8 +91,6 @@ Note that this test requires Arduino IDE.
 | 6. | Move the sensor in front of an object back and forth. |The Serial Monitor should automatically begin populating with distances from the sensor.|
 | 7. | Power down the IDE, detach the Arduino board and sensor.| The computer screen should show the Arduino has been detached.|
 
-
-### Test A004 - Serial Test
 
 ### Test A005 - Servos Test
 
