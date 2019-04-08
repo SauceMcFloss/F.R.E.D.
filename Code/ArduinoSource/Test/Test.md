@@ -2,7 +2,8 @@
 # Arduino Tests
 
 ### Test A000 - Testing BasicFREDFunctionTest.ino and ensuring all mechanical functionality is a go.
-* The BasicFREDFunctionTest is a loop that once uploaded to the Arduino Board can be attached to the RC car. When attached to the RC Car with this function, the Arduino will loop through several of the basic functions of the car, including moving forward, backwards, and turning the wheels left and right.
+
+The BasicFREDFunctionTest is a loop that once uploaded to the Arduino Board can be attached to the RC car. When attached to the RC Car with this function, the Arduino will loop through several of the basic functions of the car, including moving forward, backwards, and turning the wheels left and right.
 
 | Step | Action | Observation |
 | --- | ------------------------------------------------------------------------------| -----------------------------------------|
