@@ -1,14 +1,20 @@
 # Basic Test Codes And Functionality
 # Arduino Tests
 
-### Test A000 - Testing BasicFREDFunctionTest.ino and ensuring 
-* This Function Is A Loop Which You Upload To An Arduino To Ensure Wiring Is Correct And That Car Is Functioning.
+### Test A000 - Testing BasicFREDFunctionTest.ino and ensuring all mechanical functionality is a go.
+* The BasicFREDFunctionTest is a loop that once uploaded to the Arduino Board can be attached to the RC car. When attached to the RC Car with this function, the Arduino will loop through several of the basic functions of the car, including moving forward, backwards, and turning the wheels left and right.
 
 | Step | Action | Observation |
 | --- | ------------------------------------------------------------------------------| -----------------------------------------|
-| 1. | BasicFREDFunctionTest.ino in the Arduino IDE |
-| 2. | 
-| 3. | ground6 and 9
+| 1. | Connect the Arduino Uno Wifi Rev 2 into the PC via a USB port | The Arduino Uno's green LED should light up, and the computer should register that the Arduino Uno has been connected as a USB message. |
+| 2. | Open up the Arduino IDE | The Arduino IDE should pop up on the screen.| 
+| 3. | Open BasicFREDFunctionTest.ino in the Arduino IDE | The BasicFREDFunctionTest.ino should display itself in the Arduino IDE.|
+| 4. | Upload the BasicFredFunctionTest.ino to the board by pressing the Upload button.| The Arduino IDE should display that the test is now uploading the board.|
+| 5. | After the test uploads to board, detach the Arduino Uno Wifi Rev 2 from the PC.| The Arduino should be disconnected from the computer.|
+| 6. | Attach wires from 6 and 9 of the Arduino port to the grounds 6 and 9 within the RC car.| The Arduino should be attached securely to the car.|
+| 7.| Turn on the RC car. | The car's power light should be turned on.
+| 7. | Wait as the Arduino loops through its commands. | The car will now move its wheels back and forth and turn.|
+| 8. | After the loop completes, power down the car. | The car should stop moving. | 
 
 ### Test A001 - Testing WifiTest.ino and ensuring the Wifi is connected. 
 
