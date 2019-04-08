@@ -56,14 +56,26 @@ Note that this test requires Arduino IDE and PuTTy. The Wifi Test A001 should ha
 | 19. | Type in a single character and select enter. | The window should return "Hello \_\_", in which the underscore will be replaced with the letter typed in. |
 | 20. | Type in multiple characters and select enter. | The window should return the characters vertically. |
 
-### Test A003 - Sensors
+### Test A003 - Testing SensorTest.ino and ensuring the ultrasonic sensor is functional.
+Note that this test requires Arduino IDE.
 
-### Test A001 - Serial Test
+| Step | Action | Observation |
+| --- | ------------------------------------------------------------------------------| -----------------------------------------|
+| 1. | Connect the Arduino Uno Wifi Rev 2 into the PC via a USB port | The Arduino Uno's green LED should light up, and the computer should register that the Arduino Uno has been connected as a USB message. |
+| 2. | Open up the Arduino IDE | The Arduino IDE should pop up on the screen.| 
+| 3. | Open SensorTest.ino in the Arduino IDE| The SensorTest.ino should display itself in the Arduino IDE.|
+| 4. | Connect wires between the Arduino Board and the ultrasonic sensor as per the wiring diagram's instructions.| The wires should be secure between the board and the sensor.|
+| 5. | Go to Tools and open Serial Monitor | A blank pop-up should appear on the screen.|
+| 6. | Move the sensor in front of an object back and forth. |The Serial Monitor should automatically begin populating with distances from the sensor.|
+| 7. | Power down the IDE, detach the Arduino board and sensor.| The computer screen should show the Arduino has been detached.|
 
-### Test A004 - Servos Test
 
-### Test A005 - Process Command Test
+### Test A004 - Serial Test
+
+### Test A005 - Servos Test
+
+### Test A006 - Process Command Test
 This test requires the Serial Test to be completed first.
 
-### Test A006 - Drive Over Wifi Test
+### Test A007 - Drive Over Wifi Test
 This test requires all of the other tests to be completed.
