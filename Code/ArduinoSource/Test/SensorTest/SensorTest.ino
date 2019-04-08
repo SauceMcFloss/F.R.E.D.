@@ -1,6 +1,6 @@
 //Sensor Test
 //HardWare: Arduino Uno Wifi Rev 2, HC-SR04,  
-//Serial Connection Required Run Serial Test Prior To This Test
+//Serial Connection Required Run Serial Test Prior throttleChange();To This Test
 //Wire Board and sensor same as wiring from diagram
 //
 #include "SensorF.h"
