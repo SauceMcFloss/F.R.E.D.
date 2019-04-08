@@ -1,7 +1,7 @@
 # Basic Test Codes And Functionality
 # Arduino Tests
 
-### Test A000 - Testing BasicFREDFunctionTest.ino and ensuring all mechanical functionality is a go.
+### Test A000 - Testing BasicFREDFunctionTest.ino and ensuring all mechanical functionality is a go
 
 The BasicFREDFunctionTest is a loop that once uploaded to the Arduino Board can be attached to the RC car. When attached to the RC Car with this function, the Arduino will loop through several of the basic functions of the car, including moving forward, backwards, and turning the wheels left and right.
 
@@ -17,7 +17,7 @@ The BasicFREDFunctionTest is a loop that once uploaded to the Arduino Board can 
 | 7. | Wait as the Arduino loops through its commands. | The car will now move its wheels back and forth and turn left and right.|
 | 8. | After the loop completes, power down the car. | The car should stop moving. | 
 
-### Test A001 - Testing SerialTest.ino and ensuring Serial Monitor functionality.
+### Test A001 - Testing SerialTest.ino and ensuring Serial Monitor functionality
 
 The Serial Test simply tests that the functionality of the Serial Monitor.
 
@@ -32,7 +32,7 @@ The Serial Test simply tests that the functionality of the Serial Monitor.
 | 7. | Type in letters and hit enter. | The typed letters should appear on the screen and then be returned vertically.|
 
 
-### Test A002 - Testing WifiTest.ino and ensuring the Wifi is connected. 
+### Test A002 - Testing WifiTest.ino and ensuring the Wifi is connected
 
 Note that this test requires Arduino IDE. The Serial Test should already have been completed.
 
@@ -51,7 +51,7 @@ Note that this test requires Arduino IDE. The Serial Test should already have be
 | 11. | The print out should continuously reveal that the Arduino is attempting to connect | Every ten seconds the screen will print out "Attempting to connect to WPA SSID"
 | 12. | The wifi should connect to the Arduino board. | Once connected, the serial monitor should display "You're connected to the networkSSID: 'NetworkNameOfChoice'|
 
-### Test A003 - Testing ServerTest.ino and ensuring the server sends back and forth.
+### Test A003 - Testing ServerTest.ino and ensuring the server sends back and forth
 Note that this test requires Arduino IDE and PuTTy. The Wifi Test A001 should have already been completed.
 
 | Step | Action | Observation |
@@ -78,7 +78,7 @@ Note that this test requires Arduino IDE and PuTTy. The Wifi Test A001 should ha
 | 19. | Type in a single character and select enter. | The window should return "Hello \_\_", in which the underscore will be replaced with the letter typed in. |
 | 20. | Type in multiple characters and select enter. | The window should return the characters vertically. |
 
-### Test A004 - Testing SensorTest.ino and ensuring the ultrasonic sensor is functional.
+### Test A004 - Testing SensorTest.ino and ensuring the ultrasonic sensor is functional
 Note that this test requires Arduino IDE.
 
 | Step | Action | Observation |
@@ -92,10 +92,17 @@ Note that this test requires Arduino IDE.
 | 7. | Power down the IDE, detach the Arduino board and sensor.| The computer screen should show the Arduino has been detached.|
 
 
-### Test A005 - Servos Test
+### Test A005 - Testing ServosTest.ino and ensuring values are returned to the Serial Monitor
 
-### Test A006 - Process Command Test
-This test requires the Serial Test to be completed first.
-
-### Test A007 - Drive Over Wifi Test
-This test requires all of the other tests to be completed.
+| Step | Action | Observation |
+| --- | ------------------------------------------------------------------------------| -----------------------------------------|
+| 1. | Connect the Arduino Uno Wifi Rev 2 into the PC via a USB port | The Arduino Uno's green LED should light up, and the computer should register that the Arduino Uno has been connected as a USB message. |
+| 2. | Open up the Arduino IDE | The Arduino IDE should pop up on the screen.| 
+| 3. | Open Servos.ino in the Arduino IDE | The Servos.ino should display itself in the Arduino IDE.|
+| 4. | Upload the Servos.ino to the board by pressing the Upload button.| The Arduino IDE should display that the test is now uploading the board.|
+| 5. | Go to Tools and open Serial Monitor | A blank pop-up should appear on the screen.|
+| 6. | After the test uploads to board, detach the Arduino Uno Wifi Rev 2 from the PC.| The Arduino should be disconnected from the computer.|
+| 7. | Attach wires from 6 and 9 of the Arduino port to the grounds 6 and 9 within the RC car.| The Arduino should be attached securely to the car.|
+| 8.| Turn on the RC car. | The car's power light should be turned on.
+| 9. | Wait as the Arduino loops through its commands. | The car will now move its wheels back and forth and turn left and right, and the serial monitor should note which actions have taken place.|
+| 10. | After the loop completes, power down the car. | The car should stop moving. | 
