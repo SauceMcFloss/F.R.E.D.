@@ -8,17 +8,11 @@
 #include "WifiF.h"
 #include "RunningF.h"
 #include "ServerF.h"
+#include "StartUp.h"
 
 void setup() 
 {
-  //Initialization Functions
-  LED_Setup();
-  servoSetup();
-  sensorSetup();
-  WiFiSetup();
-  serverSetup();
-  //WE ARE READY!
-  LED_ON();
+  startUP();
 }
 
 // the loop function runs over and over again forever

@@ -24,10 +24,13 @@ int clientConnected()//F13
   {
     newClient();
     
-    while (client.available() > 0) 
+    while (client.connected() > 0) 
     {
-      processFirst();
+      if(client.available()){
+        processFirst();
+      }
     }
+    allStop();
   }
   return 1;
 }

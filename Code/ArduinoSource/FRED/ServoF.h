@@ -35,7 +35,7 @@ int throttleChange()//F6
 int steeringChange()//F7
 {
   steeringServo.write(steeringValue);
-  server.println(steeringValue);
+  //server.println(steeringValue);
   return 1;
 }
 

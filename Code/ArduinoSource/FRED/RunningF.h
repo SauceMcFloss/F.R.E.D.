@@ -10,6 +10,7 @@ int processCommand(int input1);
 int printCommands(int commands);
 int setThrottle(int input1);    
 int setSteering(int input1);
+int allStop();
 
 //RUNNING
 int processFirst()
@@ -41,7 +42,7 @@ int processFirst()
         {
           command = convertInt;
         }
-        if (command > -1 && command <= 4 || (command == 9))
+        if ((command > -1 && command <= 4 )|| (command == 9))
         {
           processCommand(command);
           printCommands(command);
@@ -64,6 +65,10 @@ int processCommand(int input1)//F16
   {
     server.println(sensorRead());
   }
+  else if(input1 == 9)
+  {
+    allStop();
+  }
   return 1;
 }
 int printCommands(int commands)//F17
@@ -82,7 +87,11 @@ int printCommands(int commands)//F17
   }
   else if (commands ==3)
   {
-    //server.println("Turning:");
+    server.println(steeringValue);
+  }
+  else if(commands == 9)
+  {
+    server.println("9");
   }
   return 1;
 }
@@ -174,4 +183,11 @@ int setSteering(int input1){  //F19
   steeringChange();
   return 1;
 }
+int allStop(){
+  setThrottle(0);
+  steeringValue = 90;
+  steeringChange();
+  return 1;
+}
+
 #endif

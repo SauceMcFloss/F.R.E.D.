@@ -1,5 +1,5 @@
-
-
+#ifndef SensorF_H
+#define SensorF_H
 int sensorSetup() {
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
@@ -19,3 +19,4 @@ long sensorRead(){
   inches = (duration/2) / 74;   // Divide by 74 or multiply by 0.0135
   return cm;
 }
+#endif
