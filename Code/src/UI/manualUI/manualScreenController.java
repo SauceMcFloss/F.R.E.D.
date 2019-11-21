@@ -28,27 +28,49 @@ public class manualScreenController
     {
         Car.getInstance().setAutonomousMode(false);
         Platform.runLater(this::createListener);
+		
+		joyStick.setFill(0);
     }
+	
+	public void readJoystick
+	{
+		double x = joyStick.getCenterX();
+		double y = joyStick.getCenterY();
+		x = Math.floor(((x - 300.0) / 300.0) * 90.0);
+		
+		if(y >= 0 && y < 200)
+		{
+			y = Math.floor(Math.abs((200.0 - y) / 200.0) * 9);
 
+			turn((int)x);
+			goForward((int)y);
+		}
+		else if(y > 200 && y <= 400)
+		{
+			y = Math.floor(Math.abs((200.0 - y) / 200.0) * 9);
 
-    //Whenever we drag the steering slider to a non 0 position we
-    //want it to snap back to 0 after the user releases the mouse.
-    //This method is bound to a onMouseReleased listener in manualScreen.fxml
-    void resetSlider()
-    {
-        if(turnSlider.getValue() != 0.0)
-        {
-            turnSlider.setValue(0.0);
-        }
-    }
+			turn((int)x);
+			goBackward((int)y);
+		}
+		else
+		{
+			resetJoystick()
+		}
+	}
+	
+	public void resetJoystick
+	{
+		joyStick.setCenterX(300.0);
+		joyStick.setCenterY(200.0);
+		setNeutral();
+	}
 
 
     //When ever a change is detected by the steering slider we
     //call this method and use the UI data to create a server command
     //and send the turn command.
-    public void turn()
+    public void turn(int raw)
     {
-        int raw = (int)turnSlider.getValue();
         String direction = raw > 0 ? "1" : "0";
         String angle = String.valueOf(Math.abs(raw));
 
@@ -58,23 +80,23 @@ public class manualScreenController
 
     //This is called when the forward button is pressed down, as well as when the
     //'W' key is pressed.
-    public void goForward()
+    public void goForward(int speed)
     {
         //Here we need to check the state of the car to prevent redundant commands
         if(Car.getInstance().getCarState().compareTo(Car.forwardCode) != 0)
         {
-            Car.getInstance().moveCarForward();
+            Car.getInstance().moveCarForward(String.valueOf(speed));
         }
     }
 
     //This is called when the backward button is pressed down, as well as when the
     //'S' key is pressed.
-    public void goBackward()
+    public void goBackward(int speed)
     {
         //Here we need to check the state of the car to prevent redundant commands
         if(Car.getInstance().getCarState().compareTo(Car.backwardCode) != 0)
         {
-            Car.getInstance().moveCarBackward();
+            Car.getInstance().moveCarBackward(String.valueOf(speed));
         }
 
     }

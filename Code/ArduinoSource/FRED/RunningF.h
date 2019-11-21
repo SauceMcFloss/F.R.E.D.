@@ -99,11 +99,15 @@ int setThrottle(int input1)//F18
 {
   if(input1 == 1)
   {
-    throttleCurrent = throttleForward;
+	  char speedChar = client.read();
+	  int speed = (int)speedChar - 48;
+    throttleCurrent = throttleForward + (5 * speed);
   }
   else if(input1 == 2)
   {
-    throttleCurrent = throttleReverse;
+	  char speedChar = client.read();
+	  int speed = (int)speedChar - 48;
+    throttleCurrent = throttleReverse - (5 * speed);
   }
   else
   {

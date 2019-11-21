@@ -144,26 +144,28 @@ public class Car
 
     //Moves car forward indefinitely at the preset speed while checking
     //to make sure we don't bind gears by switching too fast
-    public void moveCarForward()
+    public void moveCarForward(String speed)
     {
         lockBackward();
 
         while(!canMoveForward){}
 
-        Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(forwardCode));
+		String command = forwardCode;
+        Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(command.concat(speed)));
 
         state = forwardCode;
     }
 
     //Moves the car backward indefinitely at the preset speed while checking
     //to make sure we don't bind gears by switching too fast
-    public void moveCarBackward()
+    public void moveCarBackward(String speed)
     {
         lockForward();
 
         while(!canMoveBack){}
 
-        Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(backwardCode));
+		String command = backwardCode;
+        Logger.getInstance().logMessage("[Server] -> " + networkUtility.getInstance().sendCommand(command.concat(speed)));
 
         state = backwardCode;
     }
